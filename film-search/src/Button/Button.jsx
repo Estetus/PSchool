@@ -1,11 +1,11 @@
 import "./Button.css";
 
-function Button() {
-  const textBtn = "Искать";
-
+function Button({ textBtn, onClick }) {
   return (
     <>
-      <button className="search-btn">{textBtn}</button>
+      <button className="search-btn" onClick={onClick}>
+        {textBtn}
+      </button>
     </>
   );
 }

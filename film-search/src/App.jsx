@@ -1,8 +1,7 @@
 import "./index.css";
 import "./App.css";
-import Button from "./Button/Button";
-import Paragraph from "./Paragraph/Paragraph";
-import Title from "./Title/Title.jsx";
+import Header from "./Layout/Header/Header.jsx";
+import MainText from "./Layout/MainText/MainText.jsx";
 
 function App() {
   const data = [
@@ -14,9 +13,8 @@ function App() {
 
   return (
     <>
-      <Title title={data[0].title}></Title>
-      <Paragraph text={data[0].text}></Paragraph>
-      <Button></Button>
+      <Header />
+      <MainText title={data[0].title} text={data[0].text} />
     </>
   );
 }

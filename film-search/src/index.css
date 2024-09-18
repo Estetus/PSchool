@@ -12,6 +12,8 @@
   --white: #EBEEF5;
   --gray:  #8E95A9;
   --purple: #7B6EF6;
+  --text:  #A8AEBF;
+  --white: #ffffff;
 }
 
 a {
@@ -26,7 +28,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background: #121829;
