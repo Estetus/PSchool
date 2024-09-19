@@ -3,7 +3,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <img src="./logo.svg" alt="Логотип" />
+      <img className='header-logo' src="./logo.svg" alt="Логотип" />
       <ul className="header-nav">
         <li className="header-nav__item">Поиск фильмов</li>
         <li className="header-nav__item">Мои фильмы</li>

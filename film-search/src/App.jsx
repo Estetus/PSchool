@@ -1,7 +1,8 @@
 import "./index.css";
 import "./App.css";
 import Header from "./Layout/Header/Header.jsx";
-import MainText from "./Layout/MainText/MainText.jsx";
+import MainText from "./components/MainText/MainText.jsx";
+import Body from "./Layout/Body/Body.jsx";
 
 function App() {
   const data = [
@@ -15,6 +16,7 @@ function App() {
     <>
       <Header />
       <MainText title={data[0].title} text={data[0].text} />
+      <Body />
     </>
   );
 }
