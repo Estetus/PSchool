@@ -1,12 +1,11 @@
-import './Title.css'
+import styles from "./Title.module.css";
 
-function Title({title}) {
-
+function Title({ title }) {
   return (
     <>
-     <h1 className='title-search'>{title}</h1>
+      <h1 className={styles["title-search"]}>{title}</h1>
     </>
-  )
+  );
 }
 
-export default Title
+export default Title;
