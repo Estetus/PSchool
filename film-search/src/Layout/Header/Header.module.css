@@ -34,3 +34,8 @@
   position: absolute;
   right: -16px;
 }
+
+.header-logo {
+  width: 24px;
+  height: 100%;
+}

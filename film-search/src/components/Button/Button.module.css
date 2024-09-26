@@ -14,3 +14,8 @@
   background: #5145BD;
   transition: all .3s ease-in-out;
 }
+
+.login-btn {
+  max-width: 201px;
+  margin-bottom: 50px;
+}

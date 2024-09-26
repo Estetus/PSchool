@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Button from "../Button/Button";
 import styles from "./Search.module.css";
+import Input from "../Input/Input";
 
 function Search() {
   const [inputData, setInputData] = useState("");
+  const searchRef = useRef();
+  const buttonRef = useRef();
 
   const inputChange = (e) => {
     setInputData(e.target.value);
@@ -19,8 +22,8 @@ function Search() {
   return (
     <form className={styles["main-text"]} onSubmit={seacrhItem}>
       <img src="./Left Icon.svg" className={styles["form-loupe"]} />
-      <input
-        className={styles["input-search"]}
+      <Input
+        ref={searchRef}
         type="text"
         name="Название фильма"
         value={inputData}
@@ -28,7 +31,7 @@ function Search() {
         placeholder="Введите название"
       />
 
-      <Button textBtn="Искать" />
+      <Button ref={buttonRef} text="Искать" />
     </form>
   );
 }

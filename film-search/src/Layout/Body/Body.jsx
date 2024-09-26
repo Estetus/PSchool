@@ -2,9 +2,14 @@ import Card from "../../components/Card/Card";
 import styles from "./Body.module.css";
 import { INITIAL_DATE } from "../../Mocks/Moks";
 import CardList from "../../components/CardList/CardList";
+import Login from "../../components/Login/Login";
 
 function Body() {
   const data = INITIAL_DATE;
+
+  const handleLoginSubmit = (values) => {
+    console.log("Данные", values);
+  };
 
   return (
     <div className={styles["body-main"]}>
@@ -28,6 +33,7 @@ function Body() {
             ></Card>
           ))}
       </CardList>
+      <Login onSubmit={handleLoginSubmit} />
     </div>
   );
 }
