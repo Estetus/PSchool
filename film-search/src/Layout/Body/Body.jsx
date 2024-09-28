@@ -4,12 +4,10 @@ import { INITIAL_DATE } from "../../Mocks/Moks";
 import CardList from "../../components/CardList/CardList";
 import Login from "../../components/Login/Login";
 
-function Body() {
+function Body({onLogin}) {
   const data = INITIAL_DATE;
 
-  const handleLoginSubmit = (values) => {
-    console.log("Данные", values);
-  };
+  
 
   return (
     <div className={styles["body-main"]}>
@@ -33,7 +31,7 @@ function Body() {
             ></Card>
           ))}
       </CardList>
-      <Login onSubmit={handleLoginSubmit} />
+      <Login onLogin={onLogin} />
     </div>
   );
 }

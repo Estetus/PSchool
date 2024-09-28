@@ -1,26 +1,6 @@
-import { useEffect, useState } from "react";
-import { useLocalStorage } from "../../components/hooks/user-localStorage.hook";
 import styles from "./Header.module.css";
 
-function Header() {
-  const [users, setUsers] = useLocalStorage("data");
-  const [loggedUser, setLoggedUser] = useState("");
-
-  useEffect(() => {
-    if (users) {
-      const user = users.find((user) => user.isLogined);
-      setLoggedUser(user);
-    }
-  }, [users]);
-
-  const handleLogout = () => {
-    if (loggedUser) {
-      const updateUser = users.map((user) => ({ ...user, isLogined: false }));
-      setUsers(updateUser);
-      setLoggedUser(null);
-    }
-  };
-
+function Header({ loggedUser, onLogout }) {
   return (
     <div className={styles["header"]}>
       <img className={styles["header-logo"]} src="./logo.svg" alt="Логотип" />
@@ -36,7 +16,7 @@ function Header() {
               src="./User.svg"
               alt="Пользователь"
             />
-            <li className={styles["header-nav__item"]} onClick={handleLogout}>
+            <li className={styles["header-nav__item"]} onClick={onLogout}>
               Выйти
             </li>
           </>
