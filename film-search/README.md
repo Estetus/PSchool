@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Установил в контексте свойство залогиненного пользователя
+2. Вызвал контекст в login, что бы при вводе в Input отправлял как в LocalStorage так и setLoggedUser
+3. Возникли сложности в кнопке выхода. Надо было либо в контекст добавлять, либо через пропсы, но очень долго. В итоге вывел функцию выхода в SelectUser и вызвал ее там отдельно
